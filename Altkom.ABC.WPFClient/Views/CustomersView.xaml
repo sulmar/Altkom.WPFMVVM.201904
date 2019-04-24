@@ -1,0 +1,44 @@
+﻿<Page x:Class="Altkom.ABC.WPFClient.Views.CustomersView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+      xmlns:b="clr-namespace:Altkom.ABC.WPFClient.Behaviors"
+      xmlns:s="clr-namespace:System;assembly=mscorlib"
+      xmlns:local="clr-namespace:Altkom.ABC.WPFClient.Views"
+      DataContext="{Binding Source={StaticResource ViewModelLocator}, Path=CustomersViewModel}"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="CustomersView">
+
+    <Page.Resources>
+        <s:Double x:Key="MyWidth">200</s:Double>
+    </Page.Resources>
+
+    <Grid>
+
+        <StackPanel>
+            <Button Width="200" Command="{Binding SaveCommand}" Content="Save">
+                <i:Interaction.Behaviors>
+                    <b:ButtonBehavior Width="{Binding Width}" />
+                </i:Interaction.Behaviors>
+            </Button>
+
+            <Button Width="200" Content="Load">
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="MouseEnter">
+                        <i:InvokeCommandAction Command="{Binding SaveCommand}" />
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </Button>
+
+            <ListBox 
+                ItemsSource="{Binding Customers}" 
+                SelectedItem="{Binding SelectedCustomer}"
+                DisplayMemberPath="FullName" />
+
+        </StackPanel>
+
+    </Grid>
+</Page>

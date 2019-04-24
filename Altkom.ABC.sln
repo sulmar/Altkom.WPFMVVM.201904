@@ -5,6 +5,16 @@ VisualStudioVersion = 15.0.28307.572
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Altkom.ABC.WPFClient", "Altkom.ABC.WPFClient\Altkom.ABC.WPFClient.csproj", "{B5319E4C-8EE0-4199-A973-757252530E4E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Altkom.ABC.Models", "Altkom.ABC.Models\Altkom.ABC.Models.csproj", "{09376AB9-B8EE-4081-953D-07BD99CC3A0B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Altkom.ABC.ViewModels", "Altkom.ABC.ViewModels\Altkom.ABC.ViewModels.csproj", "{52B22C0B-B76D-4385-9140-0F631462DCE0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Altkom.ABC.IServices", "Altkom.ABC.IServices\Altkom.ABC.IServices.csproj", "{06CBCF7D-D624-4642-BE8B-AECA262D1C3B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Altkom.ABC.FakeServices", "Altkom.ABC.FakeServices\Altkom.ABC.FakeServices.csproj", "{F1FFD34F-F2DB-4B2E-9BBD-950A2C071487}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Altkom.ABC.UnitTests", "Altkom.ABC.UnitTests\Altkom.ABC.UnitTests.csproj", "{D3E6B591-5097-45F6-8BD2-DE8AB8F24BC2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +25,26 @@ Global
 		{B5319E4C-8EE0-4199-A973-757252530E4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B5319E4C-8EE0-4199-A973-757252530E4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B5319E4C-8EE0-4199-A973-757252530E4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09376AB9-B8EE-4081-953D-07BD99CC3A0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09376AB9-B8EE-4081-953D-07BD99CC3A0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09376AB9-B8EE-4081-953D-07BD99CC3A0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09376AB9-B8EE-4081-953D-07BD99CC3A0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52B22C0B-B76D-4385-9140-0F631462DCE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52B22C0B-B76D-4385-9140-0F631462DCE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52B22C0B-B76D-4385-9140-0F631462DCE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52B22C0B-B76D-4385-9140-0F631462DCE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06CBCF7D-D624-4642-BE8B-AECA262D1C3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06CBCF7D-D624-4642-BE8B-AECA262D1C3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06CBCF7D-D624-4642-BE8B-AECA262D1C3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06CBCF7D-D624-4642-BE8B-AECA262D1C3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1FFD34F-F2DB-4B2E-9BBD-950A2C071487}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1FFD34F-F2DB-4B2E-9BBD-950A2C071487}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1FFD34F-F2DB-4B2E-9BBD-950A2C071487}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1FFD34F-F2DB-4B2E-9BBD-950A2C071487}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3E6B591-5097-45F6-8BD2-DE8AB8F24BC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3E6B591-5097-45F6-8BD2-DE8AB8F24BC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3E6B591-5097-45F6-8BD2-DE8AB8F24BC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3E6B591-5097-45F6-8BD2-DE8AB8F24BC2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
