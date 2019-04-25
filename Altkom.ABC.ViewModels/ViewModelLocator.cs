@@ -4,6 +4,7 @@ using Altkom.ABC.IServices;
 using Altkom.ABC.Models;
 using Autofac;
 using Autofac.Extras.CommonServiceLocator;
+using Bogus;
 using CommonServiceLocator;
 using SimpleInjector;
 using System;
@@ -49,8 +50,6 @@ namespace Altkom.ABC.ViewModels
 
             builder.RegisterType<CustomerFaker>();
             builder.RegisterType<ProductFaker>();
-
-            
 
             IContainer container = builder.Build();
 

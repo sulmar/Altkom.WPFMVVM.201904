@@ -18,6 +18,18 @@
     <Grid>
 
         <DockPanel>
+
+            <Menu DockPanel.Dock="Top" >
+                <MenuItem Header="_File" x:Name="menu1">
+                    <MenuItem Header="_Exit" />
+                </MenuItem>
+                <MenuItem Header="_Tools">
+                    <MenuItem Header="_Manage users" />
+                    <MenuItem Header="_Show groups" IsCheckable="True" IsChecked="True" />
+                </MenuItem>
+            </Menu>
+
+
             <DockPanel DockPanel.Dock="Top">
                 <Button>Button 1</Button>
                 <Button>Button 2</Button>

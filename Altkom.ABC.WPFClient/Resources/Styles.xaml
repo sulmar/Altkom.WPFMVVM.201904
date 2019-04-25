@@ -1,7 +1,28 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:local="clr-namespace:Altkom.ABC.WPFClient.Resources">
+
+    <SolidColorBrush x:Key="MyColor" Color="Blue" />
+
+    <ControlTemplate x:Key="ButtonTemplate" TargetType="Button">
+        <Grid>
+            <Button>My Button</Button>
+        </Grid>
+    </ControlTemplate>
+
+    <Style x:Key="BaseButtonStyle" TargetType="Button">
+        <Setter Property="Background" Value="{StaticResource MyColor}" />
+        <Setter Property="Foreground" Value="White" />
+        <Setter Property="ContentTemplate" Value="{StaticResource ButtonTemplate}" />
+    </Style>
     
-    
-    
+
+    <Style TargetType="Button" BasedOn="{StaticResource BaseButtonStyle}">
+    </Style>
+
+    <Style x:Key="RemoveButtonStyle" TargetType="Button"
+           BasedOn="{StaticResource BaseButtonStyle}" >
+        <Setter Property="Background" Value="Red" />
+    </Style>
+
 </ResourceDictionary>

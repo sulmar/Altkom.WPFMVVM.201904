@@ -22,6 +22,8 @@ namespace Altkom.ABC.WPFClient.Views
         public ShellView()
         {
             InitializeComponent();
+
+            
         }
     }
 }
