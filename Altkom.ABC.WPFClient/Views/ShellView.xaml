@@ -3,10 +3,18 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:me="clr-namespace:Altkom.ABC.WPFClient.MarkupExtensions"
         xmlns:local="clr-namespace:Altkom.ABC.WPFClient.Views"
         xmlns:v="clr-namespace:Altkom.ABC.WPFClient.Views"
+        xmlns:c="clr-namespace:Altkom.ABC.WPFClient.Converters"
+        DataContext="{Binding Source={StaticResource ViewModelLocator}, Path=ShellViewModel}"
         mc:Ignorable="d"
         Title="ShellView" Height="450" Width="800">
+
+    <!--<Window.Resources>
+        <c:MyConverter x:Key="MyConverter"  />
+    </Window.Resources>-->
+    
     <Grid>
 
         <DockPanel>
@@ -16,7 +24,21 @@
                 <Button>Button 3</Button>
             </DockPanel>
 
-            <Frame Source="CustomersView.xaml" />
+            <StatusBar DockPanel.Dock="Bottom">
+                <StatusBar.Items>
+                    <Label Content="{me:VersionMarkup}" />
+                    <!--<Label Content="{Binding Name, Converter={StaticResource MyConverter}}" />-->
+
+                    <Label Content="{Binding Name, Converter={c:MyConverter}}" />
+                    
+                </StatusBar.Items>
+            </StatusBar>
+
+            <!--<Frame Source="CustomersView.xaml" />-->
+
+            <Frame Source="ProductsView.xaml" />
+
+
 
 
         </DockPanel>

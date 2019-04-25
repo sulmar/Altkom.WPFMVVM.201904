@@ -6,5 +6,11 @@ namespace Altkom.ABC.ViewModels
 {
     public class ShellViewModel : ViewModelBase
     {
+        public string Name { get; set; }
+
+        public ShellViewModel()
+        {
+            Name = "Hello";
+        }
     }
 }

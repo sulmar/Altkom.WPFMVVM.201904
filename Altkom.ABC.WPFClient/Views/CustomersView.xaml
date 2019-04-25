@@ -7,6 +7,8 @@
       xmlns:b="clr-namespace:Altkom.ABC.WPFClient.Behaviors"
       xmlns:s="clr-namespace:System;assembly=mscorlib"
       xmlns:local="clr-namespace:Altkom.ABC.WPFClient.Views"
+      xmlns:scm="clr-namespace:System.ComponentModel;assembly=WindowsBase"
+      xmlns:me="clr-namespace:Altkom.ABC.WPFClient.MarkupExtensions"
       DataContext="{Binding Source={StaticResource ViewModelLocator}, Path=CustomersViewModel}"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
@@ -14,6 +16,14 @@
 
     <Page.Resources>
         <s:Double x:Key="MyWidth">200</s:Double>
+
+        <CollectionViewSource x:Key="CustomersViewSource"
+                              Source="{Binding Customers}" >
+            <CollectionViewSource.SortDescriptions>
+                <scm:SortDescription PropertyName="FirstName" />
+            </CollectionViewSource.SortDescriptions>
+
+        </CollectionViewSource>
     </Page.Resources>
 
     <Grid>
@@ -25,7 +35,7 @@
                 </i:Interaction.Behaviors>
             </Button>
 
-            <Button Width="200" Content="Load">
+            <Button Width="200" Content="Load" IsEnabled="{me:IsInRoleMarkupExtension Role=Administrator}">
                 <i:Interaction.Triggers>
                     <i:EventTrigger EventName="MouseEnter">
                         <i:InvokeCommandAction Command="{Binding SaveCommand}" />
@@ -33,10 +43,21 @@
                 </i:Interaction.Triggers>
             </Button>
 
-            <ListBox 
+            <!--<ListBox 
                 ItemsSource="{Binding Customers}" 
                 SelectedItem="{Binding SelectedCustomer}"
-                DisplayMemberPath="FullName" />
+                DisplayMemberPath="FullName" />-->
+
+            <ListView ItemsSource="{Binding Source={StaticResource CustomersViewSource}}">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="FirstName" Width="200" DisplayMemberBinding="{Binding FirstName}" />
+                        <GridViewColumn Header="LastName" DisplayMemberBinding="{Binding LastName}" />
+                        <GridViewColumn Header="Description" DisplayMemberBinding="{Binding Description}" />
+                    </GridView>
+                </ListView.View>
+
+            </ListView>
 
         </StackPanel>
 

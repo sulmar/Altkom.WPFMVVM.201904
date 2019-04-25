@@ -3,10 +3,12 @@ using Altkom.ABC.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading;
 using System.Windows.Input;
 
 namespace Altkom.ABC.ViewModels
 {
+
     public class CustomersViewModel : ViewModelBase
     {
         public IEnumerable<Customer> Customers { get; set; }
@@ -49,7 +51,9 @@ namespace Altkom.ABC.ViewModels
 
         public void Load()
         {
-            Customers = customersService.Get();
+            // Thread.CurrentPrincipal.IsInRole("Administrator");
+
+           Customers = customersService.Get();
         }
     }
 }

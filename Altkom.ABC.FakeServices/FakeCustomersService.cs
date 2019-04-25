@@ -8,6 +8,7 @@ using System.Threading;
 
 namespace Altkom.ABC.FakeServices
 {
+
     public class FakeCustomersService : ICustomersService
     {
         private readonly ICollection<Customer> customers;
@@ -18,7 +19,7 @@ namespace Altkom.ABC.FakeServices
         {
             this.customerFaker = customerFaker;
 
-            customers = customerFaker.Generate(5000);
+            customers = customerFaker.Generate(100);
         }
 
         public void Add(Customer entity)
@@ -28,7 +29,7 @@ namespace Altkom.ABC.FakeServices
 
         public IEnumerable<Customer> Get()
         {
-            Thread.Sleep(TimeSpan.FromMilliseconds(500));
+           // Thread.Sleep(TimeSpan.FromMilliseconds(500));
             return customers;
         }
 
