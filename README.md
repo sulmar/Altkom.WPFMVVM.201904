@@ -52,3 +52,7 @@ PM> Install-Package PropertyChanged.Fody
 https://github.com/Fody/PropertyChanged
 
 
+### Frameworki
+- Prism
+https://github.com/sulmar/WPFMVVM-Prism7.0
+
