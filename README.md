@@ -53,9 +53,11 @@ https://github.com/Fody/PropertyChanged
 
 
 ### Frameworki
-- Prism
-https://github.com/sulmar/WPFMVVM-Prism7.0
+- MVVM Light
+https://github.com/sulmar/WPFMVVMNavigation-MVVMLight
 
 - Caliburn Micro
 https://github.com/sulmar/WPFMVVM-CaliburnMicro
 
+- Prism
+https://github.com/sulmar/WPFMVVM-Prism7.0
