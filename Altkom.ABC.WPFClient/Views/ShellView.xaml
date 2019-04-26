@@ -48,9 +48,9 @@
 
             <!--<Frame Source="CustomersView.xaml" />-->
 
-            <!--<Frame Source="ProductsView.xaml" />-->
+            <Frame x:Name="ViewFrame" />
 
-            <ContentControl Content="{Binding SelectedViewModel}" />
+            <!--<ContentControl Content="{Binding SelectedViewModel}" />-->
 
 
         </DockPanel>

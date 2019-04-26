@@ -24,19 +24,20 @@ namespace Altkom.ABC.ViewModels
             }
         }
 
-
-        public ShellViewModel()
+        public ShellViewModel(INavigationService navigationService) : base(navigationService)
         {
             Name = "Hello";
 
             ShowViewCommand = new RelayCommand<string>(p => ShowView(p));
 
-            SelectedViewModel = new CustomersViewModel(new FakeCustomersService(new FakeServices.Fakers.CustomerFaker()));
+         //   SelectedViewModel = new CustomersViewModel(new FakeCustomersService(new FakeServices.Fakers.CustomerFaker()));
         }
 
         private void ShowView(string view)
         {
-            SelectedViewModel = new ProductsViewModel(new FakeProductsService(new FakeServices.Fakers.ProductFaker()));
+            navigationService.Navigate(view, "Hello World");
+
+           // SelectedViewModel = new ProductsViewModel(new FakeProductsService(new FakeServices.Fakers.ProductFaker()));
         }
     }
 }

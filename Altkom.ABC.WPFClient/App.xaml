@@ -3,11 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:Altkom.ABC.WPFClient"
              xmlns:vm="clr-namespace:Altkom.ABC.ViewModels;assembly=Altkom.ABC.ViewModels"
+             xmlns:c="clr-namespace:Altkom.ABC.ViewModels"
              StartupUri="Views/ShellView.xaml">
     <Application.Resources>
 
         <ResourceDictionary>
-            <vm:ViewModelLocator x:Key="ViewModelLocator" />
+            <c:ViewModelLocator x:Key="ViewModelLocator" />
             
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Resources/Styles.xaml" />

@@ -11,9 +11,16 @@
 
     <Grid>
 
-        <ListBox ItemsSource="{Binding Products}"
+        <DockPanel>
+
+            <Button Command="{Binding EditCommand}" Content="Edit" />
+
+            <ListBox ItemsSource="{Binding Products}"
+                     SelectedItem="{Binding SelectedEntity}"
                  DisplayMemberPath="Name"
                  />
 
+        </DockPanel>
+        
     </Grid>
 </Page>

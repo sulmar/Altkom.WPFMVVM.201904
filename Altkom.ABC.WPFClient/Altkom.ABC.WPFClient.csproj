@@ -75,6 +75,8 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Behaviors\ButtonBehavior.cs" />
+    <Compile Include="Common\FrameNavigationService.cs" />
+    <Compile Include="Common\ViewModelLocator.cs" />
     <Compile Include="Converters\MyConverter.cs" />
     <Compile Include="MarkupExtensions\IsInRoleMarkupExtension.cs" />
     <Compile Include="MarkupExtensions\VersionMarkupExtension.cs" />
@@ -83,6 +85,9 @@
     </Compile>
     <Compile Include="Views\ProductsView.xaml.cs">
       <DependentUpon>ProductsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ProductView.xaml.cs">
+      <DependentUpon>ProductView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\ShellView.xaml.cs">
       <DependentUpon>ShellView.xaml</DependentUpon>
@@ -132,12 +137,24 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\ProductView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\ShellView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Altkom.ABC.FakeServices\Altkom.ABC.FakeServices.csproj">
+      <Project>{F1FFD34F-F2DB-4B2E-9BBD-950A2C071487}</Project>
+      <Name>Altkom.ABC.FakeServices</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Altkom.ABC.IServices\Altkom.ABC.IServices.csproj">
+      <Project>{06CBCF7D-D624-4642-BE8B-AECA262D1C3B}</Project>
+      <Name>Altkom.ABC.IServices</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Altkom.ABC.Models\Altkom.ABC.Models.csproj">
       <Project>{09376ab9-b8ee-4081-953d-07bd99cc3a0b}</Project>
       <Name>Altkom.ABC.Models</Name>

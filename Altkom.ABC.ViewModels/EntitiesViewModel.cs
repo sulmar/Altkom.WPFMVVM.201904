@@ -11,7 +11,8 @@ namespace Altkom.ABC.ViewModels
 
         private IEntitiesService<TEntity> entitiesService;
 
-        public EntitiesViewModel(IEntitiesService<TEntity> entitiesService)
+        public EntitiesViewModel(INavigationService navigationService, IEntitiesService<TEntity> entitiesService)
+            : base(navigationService)
         {
             this.entitiesService = entitiesService;
 
