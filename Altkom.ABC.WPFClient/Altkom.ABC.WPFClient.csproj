@@ -76,6 +76,7 @@
     </Compile>
     <Compile Include="Behaviors\ButtonBehavior.cs" />
     <Compile Include="Common\ContentControlNavigationService.cs" />
+    <Compile Include="Common\EventAggreator.cs" />
     <Compile Include="Common\FrameNavigationService.cs" />
     <Compile Include="Common\ViewModelLocator.cs" />
     <Compile Include="Converters\MyConverter.cs" />
