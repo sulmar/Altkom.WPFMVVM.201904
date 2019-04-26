@@ -31,8 +31,8 @@
 
 
             <DockPanel DockPanel.Dock="Top">
-                <Button>Button 1</Button>
-                <Button>Button 2</Button>
+                <Button Command="{Binding ShowViewCommand}" CommandParameter="Customers">Customers</Button>
+                <Button Command="{Binding ShowViewCommand}" CommandParameter="Products">Products</Button>
                 <Button>Button 3</Button>
             </DockPanel>
 
@@ -48,9 +48,9 @@
 
             <!--<Frame Source="CustomersView.xaml" />-->
 
-            <Frame Source="ProductsView.xaml" />
+            <!--<Frame Source="ProductsView.xaml" />-->
 
-
+            <ContentControl Content="{Binding SelectedViewModel}" />
 
 
         </DockPanel>

@@ -4,16 +4,11 @@
 
     <SolidColorBrush x:Key="MyColor" Color="Blue" />
 
-    <ControlTemplate x:Key="ButtonTemplate" TargetType="Button">
-        <Grid>
-            <Button>My Button</Button>
-        </Grid>
-    </ControlTemplate>
+
 
     <Style x:Key="BaseButtonStyle" TargetType="Button">
         <Setter Property="Background" Value="{StaticResource MyColor}" />
         <Setter Property="Foreground" Value="White" />
-        <Setter Property="ContentTemplate" Value="{StaticResource ButtonTemplate}" />
     </Style>
     
 

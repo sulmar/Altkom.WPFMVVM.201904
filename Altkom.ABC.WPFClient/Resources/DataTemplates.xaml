@@ -1,7 +1,17 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:local="clr-namespace:Altkom.ABC.WPFClient.Resources">
+                    xmlns:local="clr-namespace:Altkom.ABC.WPFClient.Resources"
+                    xmlns:m="clr-namespace:Altkom.ABC.ViewModels;assembly=Altkom.ABC.ViewModels"
+                    xmlns:v="clr-namespace:Altkom.ABC.WPFClient.Views"
+                    >
 
 
-   
+    <DataTemplate DataType="{x:Type m:ProductsViewModel}">
+        <Frame Source="../Views/ProductsView.xaml" />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type m:CustomersViewModel}">
+        <Frame Source="../Views/CustomersView.xaml" />
+    </DataTemplate>
+
 </ResourceDictionary>

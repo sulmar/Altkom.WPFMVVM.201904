@@ -138,6 +138,10 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Altkom.ABC.Models\Altkom.ABC.Models.csproj">
+      <Project>{09376ab9-b8ee-4081-953d-07bd99cc3a0b}</Project>
+      <Name>Altkom.ABC.Models</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Altkom.ABC.ViewModels\Altkom.ABC.ViewModels.csproj">
       <Project>{52b22c0b-b76d-4385-9140-0f631462dce0}</Project>
       <Name>Altkom.ABC.ViewModels</Name>
