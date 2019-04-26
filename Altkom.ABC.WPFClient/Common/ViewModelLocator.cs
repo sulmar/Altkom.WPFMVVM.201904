@@ -50,6 +50,7 @@ namespace Altkom.ABC.ViewModels
 
             // builder.RegisterType<FrameNavigationService>().As<INavigationService>().SingleInstance();
             builder.RegisterType<ContentControlNavigationService>().As<INavigationService>().SingleInstance();
+            builder.RegisterType<EventAggreator>().As<IEventAggregator>().SingleInstance();
 
             builder.RegisterType<CustomerFaker>();
             builder.RegisterType<ProductFaker>();

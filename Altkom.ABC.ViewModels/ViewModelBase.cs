@@ -6,11 +6,13 @@ namespace Altkom.ABC.ViewModels
 {
     public abstract class ViewModelBase : INotifyPropertyChanged
     {
-        protected INavigationService navigationService;
+        protected readonly INavigationService navigationService;
+        protected readonly IEventAggregator eventAggregator;
 
-        protected ViewModelBase(INavigationService navigationService)
+        protected ViewModelBase(INavigationService navigationService, IEventAggregator eventAggregator)
         {
             this.navigationService = navigationService;
+            this.eventAggregator = eventAggregator;
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

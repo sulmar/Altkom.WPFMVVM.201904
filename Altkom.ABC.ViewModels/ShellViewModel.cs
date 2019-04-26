@@ -1,6 +1,8 @@
 ﻿using Altkom.ABC.FakeServices;
+using Altkom.ABC.ViewModels.Messages;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Text;
 using System.Windows.Input;
 
@@ -24,15 +26,13 @@ namespace Altkom.ABC.ViewModels
             }
         }
 
-        public ShellViewModel(INavigationService navigationService) : base(navigationService)
+        public ShellViewModel(INavigationService navigationService, IEventAggregator eventAggregator) : base(navigationService, eventAggregator)
         {
             Name = "Hello";
 
             ShowViewCommand = new RelayCommand<string>(p => ShowView(p));
 
-            
-
-            //   SelectedViewModel = new CustomersViewModel(new FakeCustomersService(new FakeServices.Fakers.CustomerFaker()));
+            eventAggregator.Register<ProductChangedMessage>(OnProductChanged);      
         }
 
         private void ShowView(string view)
@@ -40,6 +40,11 @@ namespace Altkom.ABC.ViewModels
             navigationService.Navigate(view, "Hello World");
 
            // SelectedViewModel = new ProductsViewModel(new FakeProductsService(new FakeServices.Fakers.ProductFaker()));
+        }
+
+        private void OnProductChanged(ProductChangedMessage message)
+        {
+            Trace.WriteLine($"{message.Product.Name} was changed");
         }
     }
 }

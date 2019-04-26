@@ -9,8 +9,8 @@ namespace Altkom.ABC.ViewModels
     {
         public Product Product { get; set; }
 
-        public ProductViewModel(INavigationService navigationService) 
-            : base(navigationService)
+        public ProductViewModel(INavigationService navigationService, IEventAggregator eventAggregator) 
+            : base(navigationService, eventAggregator)
         {
             this.Product = navigationService.Parameter as Product;
         }

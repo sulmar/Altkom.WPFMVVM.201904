@@ -31,8 +31,8 @@ namespace Altkom.ABC.ViewModels
 
         public RelayCommand SaveCommand { get; private set; }
 
-        public CustomersViewModel(INavigationService navigationService, ICustomersService customersService)
-            : base(navigationService)
+        public CustomersViewModel(INavigationService navigationService, IEventAggregator eventAggregator, ICustomersService customersService)
+            : base(navigationService, eventAggregator)
         {
             this.customersService = customersService;
 
