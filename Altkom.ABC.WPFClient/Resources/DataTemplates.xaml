@@ -6,12 +6,12 @@
                     >
 
 
-    <DataTemplate DataType="{x:Type m:ProductsViewModel}">
+    <!--<DataTemplate DataType="{x:Type m:ProductsViewModel}">
         <Frame Source="../Views/ProductsView.xaml" />
     </DataTemplate>
 
     <DataTemplate DataType="{x:Type m:CustomersViewModel}">
         <Frame Source="../Views/CustomersView.xaml" />
-    </DataTemplate>
+    </DataTemplate>-->
 
 </ResourceDictionary>

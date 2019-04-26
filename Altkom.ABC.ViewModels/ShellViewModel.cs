@@ -30,7 +30,9 @@ namespace Altkom.ABC.ViewModels
 
             ShowViewCommand = new RelayCommand<string>(p => ShowView(p));
 
-         //   SelectedViewModel = new CustomersViewModel(new FakeCustomersService(new FakeServices.Fakers.CustomerFaker()));
+            
+
+            //   SelectedViewModel = new CustomersViewModel(new FakeCustomersService(new FakeServices.Fakers.CustomerFaker()));
         }
 
         private void ShowView(string view)

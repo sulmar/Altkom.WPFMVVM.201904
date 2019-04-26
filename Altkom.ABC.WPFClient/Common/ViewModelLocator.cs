@@ -48,7 +48,8 @@ namespace Altkom.ABC.ViewModels
             builder.RegisterType<FakeCustomersService>().As<ICustomersService>();
             builder.RegisterType<FakeProductsService>().As<IProductsService>();
 
-            builder.RegisterType<FrameNavigationService>().As<INavigationService>().SingleInstance();
+            // builder.RegisterType<FrameNavigationService>().As<INavigationService>().SingleInstance();
+            builder.RegisterType<ContentControlNavigationService>().As<INavigationService>().SingleInstance();
 
             builder.RegisterType<CustomerFaker>();
             builder.RegisterType<ProductFaker>();

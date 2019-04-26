@@ -48,8 +48,10 @@
 
             <!--<Frame Source="CustomersView.xaml" />-->
 
-            <Frame x:Name="ViewFrame" />
+            <!--<Frame x:Name="ViewFrame" />-->
 
+            <ContentControl x:Name="ViewControl" />
+            
             <!--<ContentControl Content="{Binding SelectedViewModel}" />-->
 
 
