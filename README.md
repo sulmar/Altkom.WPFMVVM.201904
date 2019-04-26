@@ -61,3 +61,7 @@ https://github.com/sulmar/WPFMVVM-CaliburnMicro
 
 - Prism
 https://github.com/sulmar/WPFMVVM-Prism7.0
+
+### Repozytoria
+- https://github.com/sulmar/Sulmar.WPFMVVM.Advanced
+
