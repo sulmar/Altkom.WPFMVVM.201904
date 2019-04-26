@@ -12,8 +12,8 @@
     <Grid>
 
         <StackPanel DataContext="{Binding Product}">
-            <TextBox Text="{Binding Name}" />
-            <TextBox Text="{Binding Color}" />
+            <TextBox Text="{Binding Name, ValidatesOnNotifyDataErrors=True}" />
+            <TextBox Text="{Binding Color, UpdateSourceTrigger=PropertyChanged}" />
             
         </StackPanel>
         

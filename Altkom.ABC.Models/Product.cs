@@ -1,9 +1,12 @@
-﻿using System;
+﻿using Altkom.ABC.Models.Validators;
+using FluentValidation.Attributes;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Altkom.ABC.Models
 {
+    [Validator(typeof(ProductValidator))]
     public partial class Product : Base
     {
         private string _color;
@@ -19,6 +22,8 @@ namespace Altkom.ABC.Models
                 Validating();
 
                 _color = value;
+
+                OnPropertyChanged();
 
                 Validated();
 
