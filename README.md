@@ -29,3 +29,26 @@
 | ContentControl     | x | x | x | x | x | x | x | x | x | x | x | x | x |
 | ItemsControl     | x | x | x | x | x | x | x | x | x | x | x | x | x |
 
+### Fody
+
+
+1. Dodaj biblioteki
+~~~
+PM> Install-Package Fody
+PM> Install-Package PropertyChanged.Fody
+~~~
+
+2. Utwórz plik FodyWeavers.xml
+~~~ xml
+<?xml version="1.0" encoding="utf-8" ?>
+<Weavers>
+  <PropertyChanged/>
+</Weavers>
+~~~
+
+ Wszystkie klasy, które implementują INotifyPropertyChanged będą miały wstrzyknięty kod do powiadamiania.
+
+
+https://github.com/Fody/PropertyChanged
+
+
