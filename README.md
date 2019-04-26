@@ -56,3 +56,6 @@ https://github.com/Fody/PropertyChanged
 - Prism
 https://github.com/sulmar/WPFMVVM-Prism7.0
 
+- Caliburn Micro
+https://github.com/sulmar/WPFMVVM-CaliburnMicro
+
